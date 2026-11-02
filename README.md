@@ -4,6 +4,8 @@ A lightweight collaborative document editor — create drafts, edit rich text in
 
 Built as a focused product slice (not a Google Docs clone): depth in editing, persistence, import, and sharing.
 
+**Live demo:** [https://folio-docs-seven.vercel.app](https://folio-docs-seven.vercel.app)
+
 ## Demo accounts
 
 | Email | Password | Role in the demo |

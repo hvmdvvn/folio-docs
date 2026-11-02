@@ -1,7 +1,10 @@
 Walkthrough video URL:
 
-(pending — record a 3–5 minute Loom/YouTube unlisted walkthrough covering:
-  1) create/edit/autosave
-  2) import fixtures/product-brief.md
-  3) Maya → Jordan sharing flow
-  4) scope cuts + AI workflow)
+(pending — record a 3–5 minute unlisted Loom or YouTube)
+
+Suggested outline:
+  1) Live URL + seeded login as Maya
+  2) Open Product kickoff notes; show rich text + autosave
+  3) Import fixtures/product-brief.md
+  4) Share with jordan@folio.dev; switch accounts; show Shared with you
+  5) Scope cuts + AI workflow note (30–45s)

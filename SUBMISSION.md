@@ -13,17 +13,11 @@
 
 ## Live product URL
 
-Temporary tunnel (dev machine must stay online):
-
 ```
-https://lazy-dolls-march.loca.lt
+https://folio-docs-seven.vercel.app
 ```
 
-If localtunnel shows a password/click-through interstitial, open it once, then continue.
-
-For a durable reviewer URL, follow `DEPLOY.md` (Vercel + claimed Prisma Postgres).
-
-Claim DB (prevents auto-delete after 24h):
+Claim the demo Postgres DB so it does not auto-delete after 24h:
 
 ```
 https://create-db.prisma.io/claim?projectID=proj_bu1duis35xif72bsj900y8ut
