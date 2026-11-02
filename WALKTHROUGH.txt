@@ -1,0 +1,7 @@
+Walkthrough video URL:
+
+(pending — record a 3–5 minute Loom/YouTube unlisted walkthrough covering:
+  1) create/edit/autosave
+  2) import fixtures/product-brief.md
+  3) Maya → Jordan sharing flow
+  4) scope cuts + AI workflow)
