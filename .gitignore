@@ -53,3 +53,6 @@ next-env.d.ts
 .windsurf
 skills-lock.json
 AGENTS.md
+
+.vercel
+.env*

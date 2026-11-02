@@ -1,23 +1,32 @@
 # Submission contents
 
-This folder / repository includes:
-
 | Item | Location |
 | --- | --- |
-| Source code | repository root (`src/`, `prisma/`, etc.) |
-| Local setup instructions | `README.md` |
+| Source code | https://github.com/hvmdvvn/folio-docs |
+| Local setup | `README.md` |
 | Architecture note | `ARCHITECTURE.md` |
 | AI workflow note | `AI_WORKFLOW.md` |
+| Deploy guide | `DEPLOY.md` |
 | Walkthrough video URL | `WALKTHROUGH.txt` |
 | Sample import file | `fixtures/product-brief.md` |
 | Dockerfile | `Dockerfile` |
 
 ## Live product URL
 
-_Paste deployed URL here after deploy:_
+Temporary tunnel (dev machine must stay online):
 
 ```
-LIVE_URL=
+https://lazy-dolls-march.loca.lt
+```
+
+If localtunnel shows a password/click-through interstitial, open it once, then continue.
+
+For a durable reviewer URL, follow `DEPLOY.md` (Vercel + claimed Prisma Postgres).
+
+Claim DB (prevents auto-delete after 24h):
+
+```
+https://create-db.prisma.io/claim?projectID=proj_bu1duis35xif72bsj900y8ut
 ```
 
 ## Reviewer credentials
@@ -26,7 +35,7 @@ LIVE_URL=
 - `jordan@folio.dev` / `folio123`
 - `sam@folio.dev` / `folio123`
 
-Suggested path: sign in as Maya → open **Product kickoff notes** → Share with `jordan@folio.dev` → sign out → sign in as Jordan → confirm it appears under **Shared with you**.
+Suggested path: Maya → **Product kickoff notes** → Share with `jordan@folio.dev` → sign out → Jordan → confirm **Shared with you**.
 
 ## Working vs incomplete
 
@@ -37,7 +46,7 @@ Suggested path: sign in as Maya → open **Product kickoff notes** → Share wit
 - Owned vs shared lists
 - Share / revoke by email
 - `.txt` / `.md` import
-- Persistence across refresh
+- Persistence across refresh (Postgres)
 - Automated import tests
 
 **Intentionally incomplete**
@@ -50,6 +59,6 @@ Suggested path: sign in as Maya → open **Product kickoff notes** → Share wit
 
 **Next 2–4 hours**
 
-- Durable hosted database (Postgres/Turso)
+- Finish durable Vercel project link + custom domain
 - Export Markdown
 - Viewer-only shares
