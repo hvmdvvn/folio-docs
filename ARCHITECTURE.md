@@ -22,10 +22,10 @@ Next.js App Router
   └─ JWT session cookie
     │
     ▼
-Prisma → SQLite (Document, User, DocumentShare)
+Prisma → Postgres (Document, User, DocumentShare)
 ```
 
-**Why this stack:** one TypeScript codebase, fast to deploy, TipTap gives a production-grade editing surface without rebuilding a document model, SQLite keeps local setup zero-friction for reviewers.
+**Why this stack:** one TypeScript codebase, fast to deploy, TipTap gives a production-grade editing surface without rebuilding a document model, Postgres keeps local and hosted environments aligned without volume gymnastics.
 
 ## Persistence model
 
@@ -49,7 +49,7 @@ Import accepts `.txt` / `.md` only. A small deterministic converter turns Markdo
 
 ## What I would build next (2–4 hours)
 
-1. Postgres (Neon/Turso) for durable cloud deploys without a volume  
-2. Viewer vs editor share roles  
-3. Export to Markdown  
-4. Presence indicator (even polling-based) once the core loop is locked
+1. Viewer vs editor share roles  
+2. Export to Markdown  
+3. Presence indicator (even polling-based) once the core loop is locked  
+4. Claim/migrate the demo DB onto a long-lived Neon/Prisma project

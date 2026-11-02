@@ -14,11 +14,14 @@ Built as a focused product slice (not a Google Docs clone): depth in editing, pe
 
 ## Local setup
 
-Requirements: Node.js 20+.
+Requirements: Node.js 20+ and a Postgres database.
+
+Free DB options that work well: [Neon](https://neon.tech), Supabase, or `npx create-db` (temporary Prisma Postgres you can claim).
 
 ```bash
 npm install
 cp .env.example .env
+# set DATABASE_URL and AUTH_SECRET in .env
 npm run db:setup
 npm run dev
 ```
@@ -28,7 +31,7 @@ Open [http://localhost:3000](http://localhost:3000).
 ### Useful scripts
 
 - `npm run test` — unit tests (import/parser)
-- `npm run db:setup` — create SQLite schema + seed users/docs
+- `npm run db:setup` — push schema + seed users/docs
 - `npm run build` / `npm start` — production build
 
 ## What works
@@ -51,7 +54,7 @@ A sample file lives at `fixtures/product-brief.md`.
 
 - Next.js (App Router) + TypeScript + Tailwind
 - TipTap for rich text
-- Prisma + SQLite for persistence
+- Prisma + Postgres for persistence
 - Cookie session (JWT via `jose`) + seeded bcrypt passwords
 
 ## Docs in this repo
@@ -63,11 +66,11 @@ A sample file lives at `fixtures/product-brief.md`.
 
 ## Deploy notes
 
-This app is a standard Node server (`next start`) with a SQLite file. Prefer a host that keeps a persistent disk (Railway, Render, Fly) and set:
+Works on Vercel, Railway, Render, or Fly. Set:
 
 ```env
-DATABASE_URL="file:/data/folio.db"
+DATABASE_URL="postgresql://..."
 AUTH_SECRET="<long random string>"
 ```
 
-A `Dockerfile` is included for that path. Serverless-only hosts without a database will lose writes between cold starts — use Postgres/Turso if you move there.
+On first boot (or via CI), run `npm run db:setup` so schema + demo users exist. A `Dockerfile` is included for container hosts.

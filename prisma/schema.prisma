@@ -3,17 +3,17 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id           String         @id @default(cuid())
-  email        String         @unique
+  id           String          @id @default(cuid())
+  email        String          @unique
   name         String
   passwordHash String
-  createdAt    DateTime       @default(now())
-  documents    Document[]     @relation("OwnedDocuments")
+  createdAt    DateTime        @default(now())
+  documents    Document[]      @relation("OwnedDocuments")
   shares       DocumentShare[]
 }
 
